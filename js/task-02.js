@@ -2,18 +2,19 @@ const ingredients = [
   "Potatoes",
   "Mushrooms",
   "Garlic",
-  "Tomatos",
+  "Tomatoes",
   "Herbs",
   "Condiments",
 ];
 
 const listOfIngredients = document.querySelector("#ingredients");
+const elementsToList = [];
 
 ingredients.forEach((item) => {
   const listItem = document.createElement("li");
   listItem.textContent = item;
   listItem.classList.add("item");
-  listOfIngredients.appendChild(listItem);
+  elementsToList.push(listItem);
 });
 
-console.log(listOfIngredients);
+listOfIngredients.append(...elementsToList);
