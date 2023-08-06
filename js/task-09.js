@@ -5,8 +5,9 @@ function getRandomHexColor() {
 }
 
 function changeBackgroundColorBody() {
-  body.style.backgroundColor = getRandomHexColor();
-  hexColorSpan.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+  body.style.backgroundColor = randomColor;
+  hexColorSpan.textContent = randomColor;
 }
 
 const body = document.body;

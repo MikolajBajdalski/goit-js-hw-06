@@ -15,12 +15,12 @@ const images = [
 
 const galleryList = document.querySelector(".gallery");
 
-images.forEach((image) => {
-  const liTemplate = `
+const liTemplates = images.map(
+  (image) => `
   <li>
-      <img src="${image.url}" alt="${image.alt}">
+    <img src="${image.url}" alt="${image.alt}">
   </li>
-`;
+`
+);
 
-  galleryList.insertAdjacentHTML("beforeend", liTemplate);
-});
+galleryList.insertAdjacentHTML("beforeend", liTemplates.join(""));
